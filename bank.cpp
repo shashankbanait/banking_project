@@ -14,7 +14,7 @@ private:
     string contact_details;
     double balance;
     string currency;
-    string email; // New member variable for email address
+    string email; 
     vector<string> transaction_history;
 
 public:
@@ -28,10 +28,10 @@ public:
             balance += amount;
             transaction_history.push_back("Deposited " + to_string(amount) + " " + currency);
 
-            // Print deposit statement to terminal
+            
             cout << "Deposited " << amount << " " << currency << " to account " << account_number << "." << endl;
 
-            // Send an email notification
+            
             send_email("Deposit Notification", "You have made a deposit of " + to_string(amount) + " " + currency + " to your account.");
         }
         else
